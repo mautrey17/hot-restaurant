@@ -1,0 +1,15 @@
+
+.jumbotron {
+    background: rgb(211, 211, 211);
+    border-radius: 6px;
+    align-items: center;
+}
+
+.container {
+    background: rgb(211, 211, 211);
+    border-radius: 6px;
+}
+
+h4 {
+    align-items: center;
+}
