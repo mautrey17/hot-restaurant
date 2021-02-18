@@ -1,6 +1,7 @@
 //dependencies
 const express = require('express')
 const app = express();
+const apiRoutes = require('./routes/apiRoutes')
 
 const PORT = process.env.PORT || 3000;
 
@@ -8,6 +9,13 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+
+//api routes
+const tableD = require('./data/tableData');
+const waitingD = require('./data/waitinglistData');
+
+app.get('/api/tableData', (req, res) => res.json(tableD))
+app.get('/api/waitinglistData', (req, res) => res.json(waitingD))
 
 //have express server start to listen
 
